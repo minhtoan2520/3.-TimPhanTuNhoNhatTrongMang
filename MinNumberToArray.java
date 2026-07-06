@@ -4,8 +4,13 @@ import java.util.Scanner;
 public class MinNumberToArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
         System.out.print("Nhap so phan tu cua mang: ");
         int size = input.nextInt();
+        while (size <= 0) {
+            System.out.print("So luong phan tu phai lon hon 0! \nVui long nhap lai: ");
+            size = input.nextInt();
+        }
 
         int num;
         int[] array = new int[size];
